@@ -1,0 +1,117 @@
+.chat-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: var(--color-surface-muted);
+}
+
+.chat-layout__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.chat-layout__title {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.chat-layout__logout {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-window {
+  min-height: 0;
+  overflow: hidden;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.chat-window__messages {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.message-bubble--assistant {
+  align-self: flex-start;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.message-bubble--user {
+  align-self: flex-end;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.message-bubble__content {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-input {
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.chat-input__label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.chat-input__controls {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-sm);
+}
+
+.chat-input__field {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.chat-input__field:focus {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 1px;
+}
+
+.chat-input__send {
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.chat-input__send:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
