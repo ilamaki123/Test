@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+}
+
+.userRow {
+  justify-content: flex-end;
+}
+
+.assistantRow {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: min(80%, 560px);
+  border-radius: 14px;
+  padding: 10px 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.userBubble {
+  background: #2563eb;
+  color: #ffffff;
+  border-bottom-right-radius: 6px;
+}
+
+.assistantBubble {
+  background: #e5e7eb;
+  color: #111827;
+  border-bottom-left-radius: 6px;
+}
