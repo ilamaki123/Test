@@ -1,0 +1,20 @@
+.header {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e2e8f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.action {
+  border: 1px solid #ccd3e3;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
